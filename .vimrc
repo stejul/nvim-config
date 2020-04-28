@@ -23,7 +23,7 @@ Plug 'ap/vim-css-color'
 
 "html
 "  isnowfy only compatible with python not python3
-Plug 'isnowfy/python-vim-instant-markdown'
+"Plug 'isnowfy/python-vim-instant-markdown'
 Plug 'jtratner/vim-flavored-markdown'
 Plug 'suan/vim-instant-markdown'
 Plug 'nelstrom/vim-markdown-preview'
@@ -35,7 +35,8 @@ Plug 'vim-scripts/indentpython.vim'
 Plug 'slim-template/vim-slim'
 
 "auto-completion stuff
-":Plug 'klen/python-mode'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'klen/rope-vim'
 Plug 'davidhalter/jedi-vim'
@@ -162,7 +163,7 @@ let g:diffget_upstream_map = 'gu'
 
 let base16colorspace=256
 "colorscheme
-colo spacegray
+"colo spacegray
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
@@ -170,5 +171,12 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 "let g:pymode_python = 'python'
 
 "spacegrey settings
-let g:spacegray_use_italics = 1
-let g:spacegray_low_contrast = 1
+"let g:spacegray_use_italics = 1
+"let g:spacegray_low_contrast = 1
+
+"show whitespace
+let g:indentLine_setColors = 1
+let g:indentLine_enabled = 1
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_setConceal = 1
