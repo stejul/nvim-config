@@ -29,7 +29,7 @@ Plug 'suan/vim-instant-markdown'
 Plug 'nelstrom/vim-markdown-preview'
 "python sytax checker
 Plug 'nvie/vim-flake8'
-Plug 'vim-scripts/Pydiction'
+"Plug 'vim-scripts/Pydiction'
 Plug 'vim-scripts/indentpython.vim'
 
 Plug 'slim-template/vim-slim'
@@ -91,8 +91,8 @@ set nu
 "vim conflict settings
 set stl+=%{ConflictedVersion()}
 
-"------------Start Python PEP 8 stuff----------------
-" Number of spaces that a pre-existing tab is equal to.
+"------------start python pep 8 stuff----------------
+" number of spaces that a pre-existing tab is equal to.
 au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 
 "spaces for indents
@@ -180,3 +180,12 @@ let g:indentLine_enabled = 1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_setConceal = 1
+
+"codefolding
+set nofoldenable
+
+"Split navigation keymaps
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
