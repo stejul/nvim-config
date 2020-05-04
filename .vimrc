@@ -36,7 +36,7 @@ Plug 'slim-template/vim-slim'
 
 "auto-completion stuff
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
 "Plug 'Valloric/YouCompleteMe'
 "Plug 'klen/rope-vim'
 Plug 'davidhalter/jedi-vim'
@@ -123,7 +123,6 @@ syntax on
 
 " Keep indentation level from previous line:
 autocmd FileType python set autoindent
-
 " Syntastic Configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -189,3 +188,5 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+au BufEnter *.* :syntax on
