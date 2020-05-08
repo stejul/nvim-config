@@ -1,10 +1,12 @@
 set nocompatible
-filetype off
-
+filetype plugin indent on
+"I don't like swap files
+set noswapfile
+"turn on numbering
+set nu
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
 "git interface
 Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-conflicted'
@@ -13,7 +15,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'kien/ctrlp.vim' 
 
-"Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 
@@ -36,9 +37,6 @@ Plug 'slim-template/vim-slim'
 
 "auto-completion stuff
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
-"Plug 'Valloric/YouCompleteMe'
-"Plug 'klen/rope-vim'
 Plug 'davidhalter/jedi-vim'
 Plug 'ervandew/supertab'
 ""code folding
@@ -71,22 +69,13 @@ Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
-filetype plugin indent on    " enables filetype detection
 let g:SimpylFold_docstring_preview = 1
-
 "autocomplete
 let g:ycm_autoclose_preview_window_after_completion=1
 
 
 nmap <F6> :NERDTreeToggle<CR>
-
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-"I don't like swap files
-set noswapfile
-
-"turn on numbering
-set nu
 
 "vim conflict settings
 set stl+=%{ConflictedVersion()}
@@ -119,7 +108,6 @@ set encoding=utf-8
 
 " For full syntax highlighting:
 let python_highlight_all=1
-syntax on
 
 " Keep indentation level from previous line:
 autocmd FileType python set autoindent
@@ -161,17 +149,9 @@ let g:diffget_local_map = 'gl'
 let g:diffget_upstream_map = 'gu'
 
 let base16colorspace=256
-"colorscheme
-"colo spacegray
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-
-"let g:pymode_python = 'python'
-
-"spacegrey settings
-"let g:spacegray_use_italics = 1
-"let g:spacegray_low_contrast = 1
 
 "show whitespace
 let g:indentLine_setColors = 1
@@ -189,4 +169,5 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"Turn Syntax on, everytime vim gets started
 au BufEnter *.* :syntax on
