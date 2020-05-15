@@ -5,8 +5,7 @@ set noswapfile
 "turn on numbering
 set nu
 "Disable comment on nextline
-set formatoptions-=cro
-
+set fo-=r fo -=o
 call plug#begin('~/.vim/plugged')
 
 "git interface
@@ -18,7 +17,8 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'kien/ctrlp.vim' 
 "Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 ""Git-Gutter
 Plug 'airblade/vim-gitgutter'
@@ -66,6 +66,8 @@ Plug 'vim-syntastic/syntastic'
 
 " Autcompletion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Colorscheme
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 let g:SimpylFold_docstring_preview = 1
@@ -170,6 +172,8 @@ let g:deoplete#enable_at_startup = 1
 "Turn Syntax on, everytime vim gets started
 au BufEnter *.* :syntax on
 
+"Colorscheme
+colorscheme nord
 " ----------- COC Settings
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -314,4 +318,3 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
