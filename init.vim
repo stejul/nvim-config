@@ -3,7 +3,7 @@ filetype plugin indent on
 "I don't like swap files
 set noswapfile
 "turn on numbering
-set nu
+set nu rnu
 "Disable comment on nextline
 set fo-=r fo -=o
 call plug#begin('~/.vim/plugged')
