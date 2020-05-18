@@ -142,11 +142,6 @@ autocmd FileType python set foldmethod=indent
 nnoremap <space> za 
 "----------Stop python PEP 8 stuff--------------
 
-"Git conflicted
-" Use `gl` and `gu` rather than the default conflicted diffget mappings
-let g:diffget_local_map = 'gl'
-let g:diffget_upstream_map = 'gu'
-
 let base16colorspace=256
 
 "js stuff"
@@ -168,8 +163,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-"Turn deoplete on startup
-let g:deoplete#enable_at_startup = 1
 "Turn Syntax on, everytime vim gets started
 au BufEnter *.* :syntax on
 
