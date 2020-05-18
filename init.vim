@@ -5,7 +5,7 @@ set noswapfile
 "turn on numbering
 set nu rnu
 "Disable comment on nextline
-set fo-=r fo -=o
+set formatoptions-=cro
 call plug#begin('~/.vim/plugged')
 
 "git interface
@@ -17,6 +17,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'kien/ctrlp.vim' 
 "Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
@@ -318,3 +319,4 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
