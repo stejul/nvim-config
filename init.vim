@@ -10,7 +10,7 @@ call plug#begin('~/.vim/plugged')
 
 "git interface
 Plug 'tpope/vim-fugitive'
-Plug 'christoomey/vim-conflicted'
+"Plug 'christoomey/vim-conflicted'
 "filesystem
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -76,8 +76,6 @@ let g:SimpylFold_docstring_preview = 1
 nmap <F6> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
-"vim conflict settings
-set stl+=%{ConflictedVersion()}
 
 "------------start python pep 8 stuff----------------
 " number of spaces that a pre-existing tab is equal to.
@@ -313,3 +311,8 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" Set ,twig files as HTML
+" coc-html is needed!!!
+let g:coc_filetype_map = {
+    \ 'twig': 'html',
+    \}
