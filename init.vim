@@ -1,18 +1,19 @@
 set nocompatible
 filetype plugin indent on
-"I don't like swap files
+"No swap files
 set noswapfile
-"turn on numbering
+"turn on numbering and relative numbering
 set nu rnu
 "Disable comment on nextline
 set formatoptions-=cro
+"always enable syntax
+syntax enable
 call plug#begin('~/.vim/plugged')
 
 "git interface
 Plug 'tpope/vim-fugitive'
 "Plug 'christoomey/vim-conflicted'
 "filesystem
-Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'kien/ctrlp.vim' 
 "Fuzzy finder
@@ -73,9 +74,14 @@ call plug#end()
 
 let g:SimpylFold_docstring_preview = 1
 
-nmap <F6> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+"Stop concealing strings in json
+let g:vim_json_syntax_conceal = 0
 
+"json syntax
+au BufRead,BufNewFile,BufReadPost *.json set syntax=json
+
+" Set the default file encoding to UTF-8:
+set encoding=utf-8
 
 "------------start python pep 8 stuff----------------
 " number of spaces that a pre-existing tab is equal to.
@@ -100,14 +106,14 @@ au BufRead,BufNewFile *.py,*.pyw, set textwidth=100
 " Use UNIX (\n) line endings.
 au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
 
-" Set the default file encoding to UTF-8:
-set encoding=utf-8
 
 " For full syntax highlighting:
 let python_highlight_all=1
 
 " Keep indentation level from previous line:
 autocmd FileType python set autoindent
+"----------  end python ----------------"
+
 " Syntastic Configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -116,6 +122,7 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+" ------- end syntastic -----------------"
 
 "activate bracket color
 let g:rainbow_active = 1
@@ -162,10 +169,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "Turn Syntax on, everytime vim gets started
-au BufEnter *.* :syntax on
+"au BufEnter *.* :syntax on
 
 "Colorscheme
 colorscheme nord
+
 " ----------- COC Settings
 " TextEdit might fail if hidden is not set.
 set hidden
@@ -310,6 +318,8 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"------------ end coc-settings -------------------"
 
 " Set ,twig files as HTML
 " coc-html is needed!!!
