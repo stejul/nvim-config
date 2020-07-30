@@ -47,6 +47,9 @@ Plug 'tmhedberg/SimpylFold'
 "VUE
 Plug 'posva/vim-vue'
 
+" styled components
+Plug 'styled-components/vim-styled-components'
+
 "REACT
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
