@@ -5,8 +5,7 @@ set noswapfile
 "turn on numbering and relative numbering
 set nu rnu
 "Disable comment on nextline
-set formatoptions-=cro
-au BufNewFile,BufRead * setlocal formatoptions-=cro
+au BufEnter *.* :set formatoptions-=cro
 "always enable syntax
 syntax enable
 
@@ -109,7 +108,7 @@ au BufEnter *.* :syntax on
 colorscheme nord
 "
 " Disable quote concealing in JSON files
-set conceallevel=0
+au BufEnter *.* :set conceallevel=0
 
 " Set ,twig files as HTML
 " coc-html is needed!!!
