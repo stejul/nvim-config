@@ -107,12 +107,12 @@ au BufEnter *.* :syntax on
 
 "Colorscheme
 colorscheme nord
+"
+" Disable quote concealing in JSON files
+set conceallevel=0
 
 " Set ,twig files as HTML
 " coc-html is needed!!!
 let g:coc_filetype_map = {
     \ 'twig': 'html',
     \}
-
-" Disable quote concealing in JSON files
-set conceallevel=0
