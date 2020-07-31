@@ -6,14 +6,13 @@ set noswapfile
 set nu rnu
 "Disable comment on nextline
 set formatoptions-=cro
+au BufNewFile,BufRead * setlocal formatoptions-=cro
 "always enable syntax
 syntax enable
 
 "Stop concealing strings in json
 let g:vim_json_syntax_conceal = 0
 
-"json syntax
-au BufRead,BufNewFile,BufReadPost *.json set syntax=json
 
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
@@ -114,3 +113,6 @@ colorscheme nord
 let g:coc_filetype_map = {
     \ 'twig': 'html',
     \}
+
+" Disable quote concealing in JSON files
+set conceallevel=0
