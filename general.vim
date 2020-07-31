@@ -104,7 +104,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "Turn Syntax on, everytime vim gets started
-"au BufEnter *.* :syntax on
+au BufEnter *.* :syntax on
 
 "Colorscheme
 colorscheme nord
