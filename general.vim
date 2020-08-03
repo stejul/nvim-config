@@ -6,8 +6,6 @@ set noswapfile
 set nu rnu
 "Disable comment on nextline
 au BufEnter *.* :set formatoptions-=cro
-"always enable syntax
-syntax enable
 
 "Stop concealing strings in json
 let g:vim_json_syntax_conceal = 0
@@ -91,6 +89,7 @@ let g:indentLine_enabled = 1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_setConceal = 1
+let g:vim_json_syntax_conceal = 0
 
 "codefolding
 set nofoldenable
