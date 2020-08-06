@@ -82,6 +82,7 @@ let base16colorspace=256
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+au BufRead,BufnewFile *.vue,*.js set shiftwidth=2 tabstop=2
 
 "show whitespace
 let g:indentLine_setColors = 1
@@ -89,7 +90,7 @@ let g:indentLine_enabled = 1
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_setConceal = 1
-let g:vim_json_syntax_conceal = 0
+"let g:vim_json_syntax_conceal = 0
 
 "codefolding
 set nofoldenable
@@ -107,7 +108,7 @@ au BufEnter *.* :syntax on
 colorscheme nord
 "
 " Disable quote concealing in JSON files
-au BufEnter *.* :set conceallevel=0
+"au BufEnter *.* :set conceallevel=0
 
 " Set ,twig files as HTML
 " coc-html is needed!!!
