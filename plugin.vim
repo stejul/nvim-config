@@ -66,4 +66,6 @@ Plug 'arcticicestudio/nord-vim'
 "Vim Multi Cursor
 "https://github.com/mg979/vim-visual-multi
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+"vim Debug
+"Plug 'vim-vdebug/vdebug'
 call plug#end()
