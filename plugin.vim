@@ -63,4 +63,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Colorscheme
 Plug 'arcticicestudio/nord-vim'
+"Vim Multi Cursor
+"https://github.com/mg979/vim-visual-multi
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
