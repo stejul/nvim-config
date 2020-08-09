@@ -61,11 +61,11 @@ let g:rainbow_active = 1
 " make backspaces more powerfull
 set backspace=indent,eol,start
 
-"set the with of tabstop to 4 spaces
-set tabstop=4
-set softtabstop=4
+"set the with of tabstop to 2 spaces
+set tabstop=2
+set softtabstop=2
 "make indentation to correnspond to one tab
-set shiftwidth=4
+set shiftwidth=2
 set smarttab
 set expandtab
 
