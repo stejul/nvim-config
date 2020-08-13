@@ -62,10 +62,10 @@ let g:rainbow_active = 1
 set backspace=indent,eol,start
 
 "set the with of tabstop to 2 spaces
-set tabstop=2
-set softtabstop=2
+set tabstop=4
+set softtabstop=4
 "make indentation to correnspond to one tab
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
 set expandtab
 
