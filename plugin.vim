@@ -54,7 +54,8 @@ Plug 'neomake/neomake'
 Plug 'adoy/vim-php-refactoring-toolbox'
 
 "Indentation
-Plug 'yggdroot/indentline'
+"Plug 'yggdroot/indentline'
+Plug 'thaerkh/vim-indentguides'
 
 Plug 'townk/vim-autoclose'
 Plug 'vim-syntastic/syntastic'
