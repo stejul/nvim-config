@@ -10,6 +10,9 @@ au BufEnter *.* :set formatoptions-=cro
 "Stop concealing strings in json
 let g:vim_json_syntax_conceal = 0
 
+" move vertically by visual line with j and k
+nnoremap j gj
+nnoremap k gk
 
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
@@ -120,3 +123,7 @@ let g:coc_filetype_map = {
     \}
 
 au BufEnter *.* :IndentGuidesToggle
+
+let g:syntastic_mode_map = {
+    \ "mode": "inactive",
+    \ "passive_filetypes": ["html"] }
