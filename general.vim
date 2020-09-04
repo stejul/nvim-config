@@ -14,6 +14,11 @@ let g:vim_json_syntax_conceal = 0
 nnoremap j gj
 nnoremap k gk
 
+" New window goes below
+set splitbelow
+" New windows goes right
+set splitright
+
 " Set the default file encoding to UTF-8:
 set encoding=utf-8
 
