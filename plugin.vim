@@ -69,4 +69,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 "vim Debug
 "Plug 'vim-vdebug/vdebug'
+"vim twig
+Plug 'nelsyeung/twig.vim'
 call plug#end()
