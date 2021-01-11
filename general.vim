@@ -6,6 +6,13 @@ set noswapfile
 set nu rnu
 "Disable comment on nextline
 au BufEnter *.* :set formatoptions-=cro
+" disable highlighted text on search
+set nohlsearch
+set noerrorbells
+"No text wrapping
+set nowrap
+" incremental search
+set incsearch
 
 "Stop concealing strings in json
 let g:vim_json_syntax_conceal = 0
@@ -89,6 +96,10 @@ nnoremap <space> za
 let base16colorspace=256
 
 "js stuff"
+set syn=auto
+set showmatch
+filetype on
+filetype indent on
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 au BufRead,BufnewFile *.vue,*.js,*.jsx set shiftwidth=2 tabstop=2
 
