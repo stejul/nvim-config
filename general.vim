@@ -101,7 +101,8 @@ set showmatch
 filetype on
 filetype indent on
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-au BufRead,BufnewFile *.vue,*.js,*.jsx set shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
+au BufRead,BufnewFile *.vue,*.js,*.jsx,*.ts,*.tsx  set shiftwidth=2 tabstop=2
 
 "show whitespace
 "let g:indentLine_setColors = 1
